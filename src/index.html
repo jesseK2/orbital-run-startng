@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dash through a neon galaxy as your Start.ng character."
+    />
+    <meta name="theme-color" content="#080b16" />
+    <title>Orbital Run — start.ng</title>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Orbital Run home">
+          <span class="brand-mark" aria-hidden="true">O</span>
+          <span>ORBITAL <b>RUN</b></span>
+        </a>
+        <div class="player-card" aria-live="polite">
+          <img id="player-face" class="player-face" alt="" hidden />
+          <div class="player-copy">
+            <strong id="player-name">Connecting to Start.ng…</strong>
+            <span id="player-account">Loading your character</span>
+          </div>
+          <a
+            id="sign-in"
+            class="sign-in"
+            href="https://start.ng/"
+            hidden
+          >
+            Sign in
+          </a>
+        </div>
+      </header>
+
+      <section class="game-layout" aria-label="Orbital Run game">
+        <div class="intro">
+          <p class="eyebrow"><span class="pulse-dot"></span> THREE LANES. ONE RUN.</p>
+          <h1>Find your<br /><em>orbit.</em></h1>
+          <p class="intro-copy">
+            Dodge the asteroids. Catch the stardust. Take your Start.ng
+            character as far as you can.
+          </p>
+          <div class="stats">
+            <div class="stat">
+              <span>RUN DISTANCE</span>
+              <strong id="distance">0 <small>m</small></strong>
+            </div>
+            <div class="stat">
+              <span>STARDUST</span>
+              <strong id="stardust">0</strong>
+            </div>
+            <div class="stat">
+              <span>PERSONAL BEST</span>
+              <strong id="best">0 <small>m</small></strong>
+            </div>
+          </div>
+          <p class="controls-hint">
+            <span class="key">←</span> <span class="key">→</span>
+            <span>or</span> <span class="key">A</span> <span class="key">D</span>
+            <span>to change lanes</span>
+          </p>
+        </div>
+
+        <div class="game-panel">
+          <div class="game-frame">
+            <div
+              id="three-stage"
+              class="three-stage"
+              role="img"
+              aria-label="Three-dimensional space running track"
+            ></div>
+            <div class="frame-top">
+              <span class="live-badge"><span></span> LIVE SECTOR</span>
+              <span class="sector">SECTOR 07 <b>·</b> NEBULA EDGE</span>
+            </div>
+            <div class="lane-controls" aria-label="Touch lane controls">
+              <button id="move-left" class="lane-button" aria-label="Move left">
+                ←
+              </button>
+              <button id="move-right" class="lane-button" aria-label="Move right">
+                →
+              </button>
+            </div>
+            <div id="overlay" class="overlay">
+              <div class="overlay-card">
+                <div class="overlay-orbit" aria-hidden="true">✦</div>
+                <p class="eyebrow" id="overlay-label">YOUR CHARACTER IS READY</p>
+                <h2 id="overlay-title">Ready to run?</h2>
+                <p id="overlay-copy">
+                  Shift lanes to dodge asteroids and collect stardust.
+                </p>
+                <button id="start-button" class="start-button" disabled>
+                  <span>Loading your character…</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+            <p id="connection-error" class="connection-error" hidden></p>
+          </div>
+          <div class="panel-footer">
+            <span><span class="footer-star">✦</span> YOUR START.NG CHARACTER, IN 3D</span>
+            <span>NO DOWNLOADS · JUST PLAY</span>
+          </div>
+        </div>
+      </section>
+      <footer class="page-footer">
+        <span>MADE FOR THE START.NG UNIVERSE</span>
+        <span>MOVE WITH <b>← →</b> OR <b>A D</b></span>
+      </footer>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
